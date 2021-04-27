@@ -1,13 +1,21 @@
-// Question:
+/*
 
-// Convert an array of integers into an array of strings representing the phonetic equivalent of the integer.
-// For example:
-// Given an array: [3, 25, 209], print “Three,TwoFive,TwoZeroNine” into stdout.
-// Given an array: [10, 300, 5], print “OneZero,ThreeZeroZero,Five” into stdout.
+Question:
+
+Convert an array of integers into an array of strings representing the phonetic equivalent of the integer.
+For example:
+Given an array: [3, 25, 209], print “Three,TwoFive,TwoZeroNine” into stdout.
+Given an array: [10, 300, 5], print “OneZero,ThreeZeroZero,Five” into stdout.
+
+*/
 
 // Solution:
 
-const mapNumberToMorpheme = (integerArray) => {
+const mapNumberToMorpheme = () => {
+  integerArray = process.argv.slice(2);
+
+  integerArray = integerArray.map(Number);
+
   // Maps integers [0-9] to their phonetic equivalent (morphemes)
   const integerToMorpheme = new Map([
     ["0", "Zero"],
@@ -21,6 +29,8 @@ const mapNumberToMorpheme = (integerArray) => {
     ["8", "Eight"],
     ["9", "Nine"],
   ]);
+
+  /* Edge case checks - not necessary when arguments are passed from command line */
 
   // Checks for presence of array
   if (integerArray === undefined) {
