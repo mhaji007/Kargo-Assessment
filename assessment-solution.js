@@ -5,9 +5,7 @@
 // Given an array: [3, 25, 209], print “Three,TwoFive,TwoZeroNine” into stdout.
 // Given an array: [10, 300, 5], print “OneZero,ThreeZeroZero,Five” into stdout.
 
-
-const mapNumberToPhoneme =  (integerArray) => {
-
+const mapNumberToMorpheme = (integerArray) => {
   // Map integers [0-9] to their phonetic equivalent (morphemes)
   const integerToMorpheme = new Map([
     ["0", "Zero"],
@@ -22,7 +20,5 @@ const mapNumberToPhoneme =  (integerArray) => {
     ["9", "Nine"],
   ]);
 
-
-
-
-}
+ 
+};
